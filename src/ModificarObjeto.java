@@ -1,16 +1,31 @@
-public class ModificarObjeto {
+class Rectangulo {
     int ancho;
     int alto;
 
-    Rectangulo(int ancho, int alto){
+    Rectangulo(int ancho, int alto) {
         this.ancho = ancho;
         this.alto = alto;
     }
 }
 
 public class ModificarObjeto {
-    public static void modificarRectangulo(Rectangulo r){
+
+    public static void modificarRectangulo(Rectangulo r) {
         r.ancho = 50;
         r.alto = 30;
-        System
+        System.out.println("Dentro del método:");
+        System.out.println("Ancho = " + r.ancho + ", Alto = " + r.alto);
+        System.out.println("----------------------------------------");
+
     }
+
+    public static void main(String[] args) {
+        Rectangulo miRectangulo = new Rectangulo(10, 20);
+        System.out.println("Antes de modificar:");
+        System.out.println("Ancho = " + miRectangulo.ancho + ", Alto = " + miRectangulo.alto);
+        System.out.println("----------------------------------------");
+        modificarRectangulo(miRectangulo);
+        System.out.println("Después de modificar:");
+        System.out.println("Ancho = " + miRectangulo.ancho + ", Alto = " + miRectangulo.alto);
+    }
+}
